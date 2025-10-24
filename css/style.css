@@ -1,22 +1,105 @@
-/* Esto es un comentario en CSS */
+/* --- Reseteo Esencial --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
-/* Regla para toda la página (el body) */
+/* --- Estilos Generales --- */
 body {
-    background-color: #2c3e50; /* Un color de fondo azul oscuro */
-    color: #ecf0f1;           /* Un color de texto casi blanco */
-    font-family: Arial, sans-serif; /* Cambia la fuente de texto */
-    line-height: 1.6;        /* Aumenta el espacio entre líneas de texto */
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
 
-/* Regla para la cabecera y el pie de página */
+/* --- Estilos de la Cabecera y Pie de Página --- */
 header, footer {
-    text-align: center; /* Centra el texto */
-    padding: 20px;      /* Añade un espacio interno (relleno) */
+    text-align: center;
+    padding: 20px;
 }
 
-/* Regla para el contenido principal */
+/* Borde de la cabecera */
+header {
+    border-bottom: 2px solid #1abc9c; /* Borde inferior de 2px, sólido y de color turquesa */
+}
+
+/* --- Estilos del Contenido Principal --- */
 main {
-    max-width: 800px;  /* Ancho máximo para que no se estire demasiado en pantallas grandes */
-    margin: 20px auto; /* Margen arriba/abajo de 20px y centrado horizontalmente (auto) */
-    padding: 20px;     /* Espacio interno para que el contenido no pegue con los bordes */
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Estiliza la sección "Sobre mí" para que parezca una tarjeta */
+main section {
+    background-color: #34495e; /* Un azul un poco más claro que el fondo */
+    border: 1px solid #7f8c8d;   /* Un borde gris claro */
+    border-radius: 8px;          /* Esto redondea las esquinas */
+    padding: 25px;               /* Un poco más de relleno interno */
+    margin-bottom: 20px;         /* Un margen inferior para separarlo del footer */
+}
+
+/* Regla para el ID del título */
+#titulo-principal {
+    color: #1abc9c; /* Color turquesa tambien para el borde */
+}
+
+/* Regla para la clase del botón */
+.boton-primario {
+    display: inline-block; /* Permite que apliques padding y margin */
+    background-color: #1abc9c; /* Fondo turquesa */
+    color: #2c3e50; /* Texto del color del fondo (azul oscuro) */
+    padding: 10px 20px; /* 10px arriba/abajo, 20px a los lados */
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    font-weight: bold; /* Pone el texto en negritas */
+    border-radius: 5px; /* Redondea las esquinas */
+    margin-top: 15px; /* Un margen superior para separarlo del texto */
+}
+
+/* Un efecto cuando pasamos el ratón por encima */
+/* :hover es una "pseudo-clase" que aplica estilos solo en un estado específico */
+.boton-primario:hover {
+    background-color: #16a085; /* Un turquesa un poco más oscuro */
+}
+
+/* --- Estilos de la Cabecera con FLEXBOX --- */
+
+/* 1. Convierte el header en un contenedor flexible */
+header {
+    display: flex;
+    
+    /* 2. Alinea los hijos directos (h1, nav) en los extremos opuestos del eje principal (horizontal) */
+    justify-content: space-between;
+    
+    /* 3. Centra los hijos directos en el eje transversal (vertical) */
+    align-items: center;
+
+    /* 4. Propiedades de estilo previamente definidas */
+    border-bottom: 2px solid #1abc9c;
+}
+
+/* --- Estilos del Menú de Navegación --- */
+
+/* 1. Estilos para la lista de navegación */
+header nav ul {
+    list-style: none; /* Elimina los marcadores de la lista (viñetas) */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Convierte la lista en un contenedor flexible para alinear sus items (li) */
+}
+
+/* 2. Estilos para cada item de la lista de navegación */
+header nav li {
+    margin-left: 20px; /* Aplica un margen a la izquierda de cada item para separarlos */
+}
+
+/* 3. Estilos para los enlaces dentro de la navegación */
+header nav a {
+    color: #ecf0f1;
+    text-decoration: none; /* Elimina el subrayado por defecto de los enlaces */
+    font-weight: bold;
+}
+
+/* 4. Estilos para el estado :hover de los enlaces (cuando el cursor está encima) */
+header nav a:hover {
+    color: #1abc9c; /* Cambia el color del texto */
 }
