@@ -103,3 +103,31 @@ header nav a {
 header nav a:hover {
     color: #1abc9c; /* Cambia el color del texto */
 }
+
+/* --- Estilos de la Sección de Proyectos --- */
+
+/* 1. Estilos para el título de la sección de proyectos */
+#proyectos h2 {
+    text-align: center;
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+/* 2. Convierte el contenedor en una parrilla (grid) */
+.proyectos-grid {
+    display: grid;
+
+    /* 3. Define las columnas de la parrilla de forma responsiva */
+    /* Crea tantas columnas como quepan con un tamaño mínimo de 250px y máximo de 1fr (fracción del espacio disponible) */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    /* 4. Define el espacio entre las filas y columnas de la parrilla */
+    gap: 20px;
+}
+
+/* 5. Estilos para cada tarjeta de proyecto individual */
+.proyecto-card {
+    background-color: #34495e;
+    border: 1px solid #7f8c8d;
+    border-radius: 8px;
+    padding: 25px;
+}
