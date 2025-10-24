@@ -1,0 +1,22 @@
+/* Esto es un comentario en CSS */
+
+/* Regla para toda la página (el body) */
+body {
+    background-color: #2c3e50; /* Un color de fondo azul oscuro */
+    color: #ecf0f1;           /* Un color de texto casi blanco */
+    font-family: Arial, sans-serif; /* Cambia la fuente de texto */
+    line-height: 1.6;        /* Aumenta el espacio entre líneas de texto */
+}
+
+/* Regla para la cabecera y el pie de página */
+header, footer {
+    text-align: center; /* Centra el texto */
+    padding: 20px;      /* Añade un espacio interno (relleno) */
+}
+
+/* Regla para el contenido principal */
+main {
+    max-width: 800px;  /* Ancho máximo para que no se estire demasiado en pantallas grandes */
+    margin: 20px auto; /* Margen arriba/abajo de 20px y centrado horizontalmente (auto) */
+    padding: 20px;     /* Espacio interno para que el contenido no pegue con los bordes */
+}
